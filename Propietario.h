@@ -1,27 +1,37 @@
-//
 // Created by lufe y Gonzo Feb2024.
-//
 
 #ifndef PROPIETARIO_H
 #define PROPIETARIO_H
 
+#include <iostream>
 #include <string>
+using namespace std;
 
 class Propietario {
+
 private:
-    std::string nombre;
-    std::string docIdentidad;
+    string nombre;
+    string docIdentidad;
     int edad;
+
 public:
+    // Constructores
     Propietario() = default; //Agrega constructor por defecto sin cuerpo
-    Propietario(std::string nombre, std::string docIdentidad);
+    Propietario(string nombre, string docIdentidad);
+    Propietario(int);
+
+    // Metodos
     void mostrarInfo();
-    std::string getNombre();
-    void setNombre(std::string nombre);
 
+    // Set
+    void setNombre(string nombre);
+    void setDocIdentidad(string);
 
+    // Get
+    string getNombre();
+    string getDocIdentidad();
+    int getEdad();
 
 };
-
 
 #endif //PROPIETARIO_H
